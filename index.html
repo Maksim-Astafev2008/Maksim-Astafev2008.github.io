@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Maksim Astafyev — Portfolio</title>
+  <meta name="description" content="Neon portfolio: projects, testimonials, certificates (PDF). RU · KZ · EN. Light/Dark theme." />
+  <meta name="theme-color" content="#38bdf8" />
+
+  <link rel="icon" href="favicon.ico" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="parallax" id="parallax"></div>
+  <div class="cursor" id="cursor"></div>
+
+  <header class="top">
+    <div class="topbar">
+      <div class="brand" data-i18n="brand">Maksim Astafyev</div>
+
+      <nav aria-label="Navigation">
+        <ul>
+          <li><a href="#about" data-i18n="nav_about">About</a></li>
+          <li><a href="#skills" data-i18n="nav_skills">Skills</a></li>
+          <li><a href="#projects" data-i18n="nav_projects">Projects</a></li>
+          <li><a href="#achieve" data-i18n="nav_ach">Achievements</a></li>
+          <li><a href="#testimonials" data-i18n="nav_test">Testimonials</a></li>
+          <li><a href="#certs" data-i18n="nav_certs">Certificates</a></li>
+          <li><a href="#contacts" data-i18n="nav_contacts">Contacts</a></li>
+        </ul>
+      </nav>
+
+      <div class="controls">
+        <button class="theme" id="themeBtn" title="Theme">🌗</button>
+        <button id="langDesktop" title="Language">🌐</button>
+        <div id="langDrop" class="langdrop">
+          <div class="opt" data-lang="ru">RU</div>
+          <div class="opt" data-lang="kk">KZ</div>
+          <div class="opt" data-lang="en">EN</div>
+        </div>
+        <button class="burger" id="burger">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="drawer" id="drawer">
+    <div class="menu">
+      <a href="#about" data-i18n="nav_about">About</a>
+      <a href="#skills" data-i18n="nav_skills">Skills</a>
+      <a href="#projects" data-i18n="nav_projects">Projects</a>
+      <a href="#achieve" data-i18n="nav_ach">Achievements</a>
+      <a href="#testimonials" data-i18n="nav_test">Testimonials</a>
+      <a href="#certs" data-i18n="nav_certs">Certificates</a>
+      <a href="#contacts" data-i18n="nav_contacts">Contacts</a>
+      <div class="lang-row">
+        <div class="lang-btn" data-lang="ru">RU</div>
+        <div class="lang-btn" data-lang="kk">KZ</div>
+        <div class="lang-btn" data-lang="en">EN</div>
+      </div>
+    </div>
+  </div>
+
+  <section class="hero" id="home">
+    <h1 id="typed"><span class="caret"></span></h1>
+    <div>
+      <a class="btn" href="#projects" data-i18n-btn="projectsBtn">View Projects</a>
+      <a class="btn ghost" href="#contacts" data-i18n-btn="contactBtn">Contact me</a>
+    </div>
+    <div class="sub">
+      <span data-i18n="github_lbl">GitHub:</span>
+      <a href="https://github.com/Maksim-Astafev2008" target="_blank" rel="noreferrer">Maksim-Astafev2008</a>
+    </div>
+  </section>
+
+  <main>
+    <section id="about" class="anim card">
+      <h2 data-i18n="about_h">About me</h2>
+      <p class="sub" data-i18n="about_p">I am a junior web developer from Kazakhstan. I build modern neon-styled, clean websites.</p>
+    </section>
+
+    <section class="anim card">
+      <h2 data-i18n="stats_h">My stats</h2>
+      <div class="kpi">
+        <div class="item"><b data-count="5">0</b><div data-i18n="stats_projects">Projects</div></div>
+        <div class="item"><b data-count="8">0</b><div data-i18n="stats_tech">Technologies</div></div>
+        <div class="item"><b data-count="2">0</b><div data-i18n="stats_hacks">Hackathons</div></div>
+        <div class="item"><b data-count="2">0</b><div data-i18n="stats_certs">Certificates</div></div>
+      </div>
+    </section>
+
+    <section id="skills" class="anim card">
+      <h2 data-i18n="skills_h">Skills</h2>
+      <div class="skills" id="skillsList"></div>
+    </section>
+
+    <section id="projects" class="anim card proj3d">
+      <h2 data-i18n="proj_h">Projects</h2>
+      <div class="slider">
+        <button class="arrow prev" aria-label="Prev" onclick="scrollX(-1)">◀</button>
+        <div class="trackX" id="slider">
+          <div class="card slide projcard">
+            <h3 data-i18n="proj1_h">Bloom &amp; Grace — Flower Shop</h3>
+            <p class="sub" data-i18n="proj1_desc">Responsive flower shop with neon animations and fast pages.</p>
+            <div>
+              <a class="btn" href="#" data-i18n-btn="demo">Demo</a>
+              <a class="btn ghost" href="#" data-i18n-btn="repo">Repo</a>
+            </div>
+          </div>
+          <div class="card slide projcard">
+            <h3 data-i18n="proj2_h">JS Game — Towers & Archers</h3>
+            <p class="sub" data-i18n="proj2_desc">Player always wins. Canvas animation, HUD, levels.</p>
+            <div>
+              <a class="btn" href="#" data-i18n-btn="demo">Demo</a>
+              <a class="btn ghost" href="#" data-i18n-btn="repo">Repo</a>
+            </div>
+          </div>
+        </div>
+        <button class="arrow next" aria-label="Next" onclick="scrollX(1)">▶</button>
+      </div>
+
+      <p class="sub" data-i18n="repos_title">Latest GitHub repositories (with stars):</p>
+      <div id="repos" class="trackX"></div>
+    </section>
+
+    <section id="achieve" class="anim card">
+      <h2 data-i18n="ach_h">Achievements</h2>
+      <div class="trophies">
+        <div class="trophy"><b>2</b><div data-i18n="ach_1">Hackathon participations</div></div>
+        <div class="trophy"><b>100%</b><div data-i18n="ach_2">Responsive layouts</div></div>
+        <div class="trophy"><b>Git</b><div data-i18n="ach_3">Teamwork</div></div>
+        <div class="trophy"><b>JS</b><div data-i18n="ach_4">Interactive & animations</div></div>
+      </div>
+    </section>
+
+    <section id="testimonials" class="anim card">
+      <h2 data-i18n="test_h">Testimonials</h2>
+      <div class="testimonials" id="reviews">
+        <div class="quote anim-star">
+          <div data-i18n="q1">“Maksim is someone you can always rely on.”</div>
+          <div class="stars">★★★★★ — Михаил</div>
+        </div>
+        <div class="quote anim-star">
+          <div data-i18n="q2">“Very communicative and brings the best ideas.”</div>
+          <div class="stars">★★★★★ — Юлия</div>
+        </div>
+        <div class="quote anim-star">
+          <div data-i18n="q3">“Great teammate, always finishes the tasks.”</div>
+          <div class="stars">★★★★★ — Семён</div>
+        </div>
+        <div class="quote anim-star">
+          <div data-i18n="q4">“Strong progress. Will be a solid specialist.”</div>
+          <div class="stars">★★★★★ — Алексей</div>
+        </div>
+        <div class="quote anim-star">
+          <div data-i18n="q5">“Always helps, even when busy — respect.”</div>
+          <div class="stars">★★★★★ — Диана</div>
+        </div>
+        <div class="quote anim-star">
+          <div data-i18n="q6">“Learns fast. Adapts at a high level.”</div>
+          <div class="stars">★★★★★ — Влад</div>
+        </div>
+      </div>
+
+      <button class="btn" id="addReviewBtn" data-i18n-btn="add_review">✍ Leave a review</button>
+
+      <div id="reviewModal" class="modal hidden">
+        <div class="modal-content">
+          <textarea id="reviewInput" maxlength="150" placeholder="Your review..." data-i18n-placeholder="review_ph"></textarea>
+          <div class="stars-select">★★★★★</div>
+          <div class="actions">
+            <button class="btn" id="submitReview" data-i18n-btn="send">Send</button>
+            <button class="btn ghost" id="closeModal" data-i18n-btn="cancel">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="certs" class="anim card">
+      <h2 data-i18n="certs_h">Certificates</h2>
+
+      <div class="card cert">
+        <h3 data-i18n="cert1_h">MORRISON — Web Developer</h3>
+        <object data="certificate-845795.pdf" type="application/pdf" class="pdf"></object>
+        <div>
+          <a class="btn" href="certificate-845795.pdf" target="_blank" data-i18n-btn="open_pdf">📄 Open</a>
+          <a class="btn ghost" href="certificate-845795.pdf" download data-i18n-btn="download_pdf">⬇ Download</a>
+        </div>
+      </div>
+
+      <div class="card cert">
+        <h3 data-i18n="cert2_h">Personal Certificate — Maksim Astafyev</h3>
+        <object data="Астафьев Максим Петрович.pdf" type="application/pdf" class="pdf"></object>
+        <div>
+          <a class="btn" href="Астафьев Максим Петрович.pdf" target="_blank" data-i18n-btn="open_pdf">📄 Open</a>
+          <a class="btn ghost" href="Астафьев Максим Петрович.pdf" download data-i18n-btn="download_pdf">⬇ Download</a>
+        </div>
+      </div>
+
+    </section>
+
+    <section id="contacts" class="anim card">
+      <h2 data-i18n="contacts_h">Contacts</h2>
+      <p class="sub">
+        <span data-i18n="email_lbl">Email:</span> <a href="mailto:maksimastafev540@gmail.com">maksimastafev540@gmail.com</a> ·
+        <span data-i18n="tg_lbl">Telegram:</span> <a href="https://t.me/maksim_official_2008" target="_blank" rel="noreferrer">@maksim_official_2008</a>
+      </p>
+      <div class="actions">
+        <a class="btn" href="mailto:maksimastafev540@gmail.com" data-i18n-btn="write_email">Write Email</a>
+        <a class="btn ghost" href="https://t.me/maksim_official_2008" target="_blank" rel="noreferrer" data-i18n-btn="open_tg">Open Telegram</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>© <span id="year"></span> · <span data-i18n="footer_name">Maksim Astafyev</span> · <span data-i18n="footer_langs">RU · KK · EN</span></footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
